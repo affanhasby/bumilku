@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+<meta name="description" content="BumilKu — Buku KIA digital untuk memantau kehamilan, rekam kunjungan dokter, dan berbagi ringkasan medis."/>
+<title>BumilKu — Buku KIA Digital</title>
+<style>
+  html,body{margin:0;padding:0;height:100%;background:#D4C9C1;}
+  #root{height:100%;}
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<!-- React & Babel via CDN -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" referrerpolicy="no-referrer"></script>
+<!-- Supabase JS — must load before db.js -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+
+<!-- App modules — urutan penting! -->
+<script type="text/babel" src="src/constants.js"></script>
+<script type="text/babel" src="src/utils.js"></script>
+<script type="text/babel" src="src/hooks.js"></script>
+<script type="text/babel" src="src/styles.js"></script>
+<script type="text/babel" src="src/db.js"></script>
+<script type="text/babel" src="src/components/Overlay.jsx"></script>
+<script type="text/babel" src="src/components/FormComponents.jsx"></script>
+<script type="text/babel" src="src/components/PinScreen.jsx"></script>
+<script type="text/babel" src="src/components/ApiKeySetup.jsx"></script>
+<script type="text/babel" src="src/components/HomeScreen.jsx"></script>
+<script type="text/babel" src="src/components/KunjunganScreen.jsx"></script>
+<script type="text/babel" src="src/components/RingkasanScreen.jsx"></script>
+<script type="text/babel" src="src/components/MonitorScreen.jsx"></script>
+<script type="text/babel" src="src/components/ProfilScreen.jsx"></script>
+<script type="text/babel" src="src/App.jsx"></script>
+
+<!-- Mount App -->
+<script type="text/babel">
+  ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>
