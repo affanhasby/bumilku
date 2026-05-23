@@ -150,13 +150,6 @@ function ProfilScreen({ profil, setProfil, kunjungan }) {
           {saved ? "✓ Tersimpan!" : "Simpan Profil"}
         </button>
 
-        {/* ── Backup ── */}
-        <div className="card" style={{ textAlign: "center" }}>
-          <p style={{ fontFamily: "Lora,serif", fontSize: 16, fontWeight: 700, color: "var(--tx)", marginBottom: 6 }}>Backup Data</p>
-          <p style={{ fontSize: 13, color: "var(--mu)", marginBottom: 14 }}>Download semua data kunjungan sebagai backup</p>
-          <button className="btn bg" onClick={exportData}>📥 Download Backup (.json)</button>
-        </div>
-
         <div style={{ height: 4 }} />
       </div>
     </div>

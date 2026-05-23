@@ -384,14 +384,6 @@ function MonitorScreen({ initialTab = "kick", setInitialTab }) {
                 </div>
               ))}
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
-              <a href="tel:119" className="btn bd2" style={{ textDecoration: "none", flexDirection: "column", gap: 4, padding: "16px 10px" }}>
-                <span style={{ fontSize: 30 }}>🚑</span><span>Emergency 119</span>
-              </a>
-              <a href="tel:021500454" className="btn bg" style={{ textDecoration: "none", flexDirection: "column", gap: 4, padding: "16px 10px" }}>
-                <span style={{ fontSize: 30 }}>🏥</span><span>Info RS BPJS</span>
-              </a>
-            </div>
           </div>
         )}
       </div>

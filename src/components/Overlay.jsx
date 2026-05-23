@@ -6,6 +6,7 @@ function Overlay({ onClose, children }) {
   useEffect(() => {
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    document.body.classList.add("sheet-open");
 
     const el = ref.current;
     const block = (e) => { if (e.target === el) e.preventDefault(); };
@@ -13,6 +14,7 @@ function Overlay({ onClose, children }) {
 
     return () => {
       document.body.style.overflow = prev;
+      document.body.classList.remove("sheet-open");
       el?.removeEventListener("touchmove", block);
     };
   }, []);
