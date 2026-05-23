@@ -24,6 +24,15 @@ function ProfilScreen({ profil, setProfil, kunjungan }) {
 
   return (
     <div>
+      {/* ── Toast ── */}
+      {saved && (
+        <div style={{ position: "fixed", top: 24, left: 0, right: 0, zIndex: 2000, display: "flex", justifyContent: "center", pointerEvents: "none" }}>
+          <div style={{ background: "var(--sg)", color: "#fff", borderRadius: 14, padding: "12px 22px", fontSize: 14, fontWeight: 700, boxShadow: "0 4px 18px rgba(90,138,110,.38)", animation: "fU .3s ease both" }}>
+            ✓ Profil berhasil disimpan!
+          </div>
+        </div>
+      )}
+
       {/* ── Header ── */}
       <div className="hdr">
         <div className="hdr-in">

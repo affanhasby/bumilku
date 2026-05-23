@@ -60,7 +60,7 @@ function App() {
     setMonitorSubTab(sub);
   };
 
-  const Screen = () => {
+  const renderScreen = () => {
     switch (tab) {
       case "home":      return <HomeScreen      profil={profil} kunjungan={kunjungan} go={navigateToTab} />;
       case "kunjungan": return <KunjunganScreen kunjungan={kunjungan} addKunjungan={addKunjungan} updateKunjungan={updateKunjungan} deleteKunjungan={deleteKunjungan} profil={profil} />;
@@ -81,7 +81,7 @@ function App() {
     </div>
   ) : (
     <>
-      <div className="screen"><Screen /></div>
+      <div className="screen">{renderScreen()}</div>
       <nav className="bnav">
         {TABS.map(t => (
           <button key={t.id} className={`ni ${tab === t.id ? "on" : ""}`} onClick={() => setTab(t.id)}>

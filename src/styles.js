@@ -8,7 +8,7 @@ const CSS = `
   --mu:#A08880;--tx:#3D2B26;--bd:#EEE0D6;--wh:#FFF;
   --sh:rgba(139,74,60,0.10);--sh2:rgba(139,74,60,0.16);
 }
-html,body{height:100%;background:#D4C9C1;font-family:'Plus Jakarta Sans',sans-serif;touch-action:manipulation;}
+html,body{height:100%;background:var(--ro2);font-family:'Plus Jakarta Sans',sans-serif;touch-action:manipulation;overscroll-behavior:none;}
 #root{display:flex;justify-content:center;height:100%;}
 .shell{width:100%;max-width:430px;height:100%;background:var(--cr);display:flex;flex-direction:column;margin:0 auto;touch-action:manipulation;}
 .screen{flex:1;overflow-y:auto;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom));-webkit-overflow-scrolling:touch;scrollbar-width:none;overscroll-behavior:contain;}
@@ -49,7 +49,7 @@ input[type=date].inp{min-width:0;width:100%;max-width:100%;-webkit-min-logical-w
 .ig{margin-bottom:14px;width:100%;overflow:hidden;}
 /* Sheet */
 .ovl{position:fixed;inset:0;background:rgba(61,43,38,.52);z-index:1000;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;touch-action:none;}
-.sht{background:var(--cr);border-radius:24px 24px 0 0;width:100%;max-width:430px;max-height:94vh;overflow-y:auto;overflow-x:hidden;padding:0 18px 36px;animation:sU .32s cubic-bezier(.16,1,.3,1) both;overscroll-behavior:contain;touch-action:pan-y;-webkit-overflow-scrolling:touch;}
+.sht{background:var(--cr);border-radius:24px 24px 0 0;width:100%;max-width:430px;max-height:92vh;overflow-y:auto;overflow-x:hidden;padding:0 18px 36px;animation:sU .32s cubic-bezier(.16,1,.3,1) both;overscroll-behavior:contain;touch-action:pan-y;-webkit-overflow-scrolling:touch;}
 .sht::-webkit-scrollbar{display:none;}
 @keyframes sU{from{transform:translateY(100%);}to{transform:translateY(0);}}
 .hndl{width:36px;height:4px;background:var(--bd);border-radius:2px;margin:12px auto 18px;}
