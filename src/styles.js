@@ -11,7 +11,7 @@ const CSS = `
 html,body{height:100%;overflow:hidden;background:var(--ro2);font-family:'Plus Jakarta Sans',sans-serif;touch-action:manipulation;overscroll-behavior:none;}
 #root{display:flex;justify-content:center;height:100%;}
 .shell{width:100%;max-width:430px;height:100%;background:var(--cr);display:flex;flex-direction:column;margin:0 auto;touch-action:manipulation;}
-.screen{flex:1;overflow-y:auto;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom));-webkit-overflow-scrolling:touch;scrollbar-width:none;overscroll-behavior:contain;}
+.screen{flex:1;overflow-y:auto;overflow-x:hidden;padding-bottom:calc(84px + env(safe-area-inset-bottom));-webkit-overflow-scrolling:touch;scrollbar-width:none;overscroll-behavior:none;}
 .screen::-webkit-scrollbar{display:none;}
 /* Nav */
 .bnav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;background:var(--wh);border-top:1px solid var(--bd);display:flex;z-index:200;padding:6px 0 0;padding-bottom:max(14px,env(safe-area-inset-bottom));box-shadow:0 -6px 24px var(--sh2);transition:transform .25s ease,opacity .25s ease;}
