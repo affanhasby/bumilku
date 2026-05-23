@@ -27,7 +27,7 @@ body.sheet-open .bnav{transform:translateX(-50%) translateY(100%);opacity:0;poin
 .hdr::after{content:'';position:absolute;bottom:-70px;left:-40px;width:180px;height:180px;background:rgba(255,255,255,.05);border-radius:50%;}
 .hdr-in{position:relative;z-index:1;}
 /* Cards */
-.card{background:var(--wh);border-radius:20px;padding:18px;box-shadow:0 2px 14px var(--sh);border:1px solid var(--bd);}
+.card{background:var(--wh);border-radius:20px;padding:18px;box-shadow:0 2px 14px var(--sh);border:1px solid var(--bd);overflow:hidden;}
 .csm{background:var(--wh);border-radius:14px;padding:13px 15px;box-shadow:0 2px 10px var(--sh);border:1px solid var(--bd);}
 .cpe{background:var(--psm);border-radius:14px;padding:13px 15px;border:1px solid var(--bd);}
 /* Buttons */
@@ -45,8 +45,8 @@ textarea.inp{resize:vertical;min-height:76px;}
 select.inp{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23A08880' d='M6 8L0 0h12z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:36px;}
 input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0;}
 input[type=number]{-moz-appearance:textfield;}
-input[type=date].inp{min-width:0;width:100%;-webkit-min-logical-width:0;}
-.ig{margin-bottom:14px;}
+input[type=date].inp{min-width:0;width:100%;max-width:100%;-webkit-min-logical-width:0;-webkit-appearance:none;display:block;}
+.ig{margin-bottom:14px;width:100%;overflow:hidden;}
 /* Sheet */
 .ovl{position:fixed;inset:0;background:rgba(61,43,38,.52);z-index:1000;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;touch-action:none;}
 .sht{background:var(--cr);border-radius:24px 24px 0 0;width:100%;max-width:430px;max-height:94vh;overflow-y:auto;overflow-x:hidden;padding:0 18px 36px;animation:sU .32s cubic-bezier(.16,1,.3,1) both;overscroll-behavior:contain;touch-action:pan-y;-webkit-overflow-scrolling:touch;}
