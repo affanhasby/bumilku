@@ -370,11 +370,11 @@ Isi null jika tidak terbaca. JSON harus valid.`;
       {showForm && (
         <Overlay onClose={() => { setShowForm(false); setForm({ ...BLANK }); setSaveError(""); }}>
           <div className="sht">
-            <div style={{ position: "sticky", top: 0, background: "var(--cr)", zIndex: 10, paddingTop: 12, marginBottom: 20 }}>
+            <div style={{ position: "sticky", top: 0, background: "var(--cr)", zIndex: 10, paddingTop: 12, paddingBottom: 14, marginBottom: 20, borderBottom: "1.5px solid var(--bd)", boxShadow: "0 2px 8px rgba(139,74,60,0.07)" }}>
               <div className="hndl" style={{ margin: "0 auto 12px" }} />
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <h2 style={{ fontFamily: "Lora,serif", fontSize: 21, fontWeight: 700, color: "var(--tx)" }}>{form.id ? "Edit Kunjungan" : "Tambah Kunjungan"}</h2>
-                <button onClick={() => { setShowForm(false); setForm({ ...BLANK }); setSaveError(""); }} style={{ background: "var(--psm)", border: "none", borderRadius: 10, padding: "6px 12px", cursor: "pointer", fontSize: 16, color: "var(--mu)" }}>✕</button>
+                <button onClick={() => { setShowForm(false); setForm({ ...BLANK }); setSaveError(""); }} style={{ background: "var(--psm)", border: "1.5px solid var(--bd)", borderRadius: 10, padding: "6px 14px", cursor: "pointer", fontSize: 16, color: "var(--mu)" }}>✕</button>
               </div>
             </div>
 
@@ -694,11 +694,11 @@ Isi null jika tidak terbaca. JSON harus valid.`;
       {detail && (
         <Overlay onClose={() => setDetail(null)}>
           <div className="sht">
-            <div style={{ position: "sticky", top: 0, background: "var(--cr)", zIndex: 10, paddingTop: 12, marginBottom: 16 }}>
+            <div style={{ position: "sticky", top: 0, background: "var(--cr)", zIndex: 10, paddingTop: 12, paddingBottom: 14, marginBottom: 16, borderBottom: "1.5px solid var(--bd)", boxShadow: "0 2px 8px rgba(139,74,60,0.07)" }}>
               <div className="hndl" style={{ margin: "0 auto 12px" }} />
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <span className="badge">Minggu {detail.usiaKehamilan || "?"}</span>
-                <button onClick={() => setDetail(null)} style={{ background: "var(--psm)", border: "none", borderRadius: 10, padding: "6px 12px", cursor: "pointer", fontSize: 16, color: "var(--mu)" }}>✕</button>
+                <button onClick={() => setDetail(null)} style={{ background: "var(--psm)", border: "1.5px solid var(--bd)", borderRadius: 10, padding: "6px 14px", cursor: "pointer", fontSize: 16, color: "var(--mu)" }}>✕</button>
               </div>
             </div>
             <h2 style={{ fontFamily: "Lora,serif", fontSize: 22, fontWeight: 700, color: "var(--tx)", marginBottom: 4 }}>{fmtDate(detail.tanggal)}</h2>

@@ -54,10 +54,14 @@ function App() {
     { id: "profil",    icon: "👤", label: "Profil"    },
   ];
 
+  const screenRef = useRef();
+  const scrollToTop = () => { if (screenRef.current) screenRef.current.scrollTop = 0; };
+
   const [monitorSubTab, setMonitorSubTab] = useState("kick");
   const navigateToTab = (t, sub = "kick") => {
     setTab(t);
     setMonitorSubTab(sub);
+    scrollToTop();
   };
 
   const renderScreen = () => {
@@ -81,10 +85,10 @@ function App() {
     </div>
   ) : (
     <>
-      <div className="screen">{renderScreen()}</div>
+      <div ref={screenRef} className="screen">{renderScreen()}</div>
       <nav className="bnav">
         {TABS.map(t => (
-          <button key={t.id} className={`ni ${tab === t.id ? "on" : ""}`} onClick={() => setTab(t.id)}>
+          <button key={t.id} className={`ni ${tab === t.id ? "on" : ""}`} onClick={() => { setTab(t.id); scrollToTop(); }}>
             <span className="ni-i">{t.icon}</span>
             <span className="ni-l">{t.label}</span>
           </button>
