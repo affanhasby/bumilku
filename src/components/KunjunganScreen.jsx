@@ -8,8 +8,12 @@ function KunjunganScreen({ kunjungan, addKunjungan, updateKunjungan, deleteKunju
   const [saving,    setSaving]    = useState(false);
   const [saveError, setSaveError] = useState("");
 
-  const [apiKey]                 = useLS("gm_key",    "AIzaSyCmc8sE_ME8AyYNKgJovSTVmD6aCm79n9I");
+  const [apiKey, setApiKey] = useState("");
   const [gmModel, setGmModelFix] = useLS("gm_model",  "gemini-2.5-flash");
+
+  useEffect(() => {
+    db.rpc("get_gemini_key").then(({ data }) => { if (data) setApiKey(data); }).catch(() => {});
+  }, []);
 
   // Auto-migrate deprecated models
   useEffect(() => { if (/^gemini-1\.5/.test(gmModel)) setGmModelFix("gemini-2.5-flash"); }, [gmModel, setGmModelFix]);

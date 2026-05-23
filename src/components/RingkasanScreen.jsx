@@ -159,7 +159,7 @@ function RingkasanScreen({ profil, kunjungan }) {
   };
 
   // ── Overall AI Summary States ───────────────────────────────────────────
-  const [apiKey]                  = useLS("gm_key", "AIzaSyCmc8sE_ME8AyYNKgJovSTVmD6aCm79n9I");
+  const [apiKey, setApiKey] = useState("");
   const [gmModel]                 = useLS("gm_model", "gemini-2.5-flash");
   const [aiSummaryOverall, setAiSummaryOverallState] = useState("");
   const saveAiSummary = (text) => {
@@ -187,12 +187,14 @@ function RingkasanScreen({ profil, kunjungan }) {
     Promise.all([
       dbGetKicks(), dbGetMoods(), dbGetSymptoms(), dbGetContractions(),
       dbGetConfig("ai_summary_overall"),
-    ]).then(([k, m, s, c, aiSum]) => {
+      db.rpc("get_gemini_key"),
+    ]).then(([k, m, s, c, aiSum, gmRes]) => {
       setKicksData(k || {});
       setMoodsData(m || {});
       setSymptomsData(s || {});
       setContractionsData(c || []);
       setAiSummaryOverallState(aiSum || "");
+      if (gmRes.data) setApiKey(gmRes.data);
     }).catch(console.error);
   }, []);
 
