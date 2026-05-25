@@ -8,17 +8,17 @@ const CSS = `
   --mu:#A08880;--tx:#3D2B26;--bd:#EEE0D6;--wh:#FFF;
   --sh:rgba(139,74,60,0.10);--sh2:rgba(139,74,60,0.16);
 }
-html,body{height:100%;background:var(--ro2);font-family:'Plus Jakarta Sans',sans-serif;touch-action:manipulation;overscroll-behavior:none;}
+html,body{height:100%;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;touch-action:manipulation;overscroll-behavior:none;}
 #root{display:flex;justify-content:center;height:100%;}
 .shell{width:100%;max-width:430px;height:100%;background:var(--cr);display:flex;flex-direction:column;margin:0 auto;touch-action:manipulation;overscroll-behavior:none;}
-.screen{flex:1;overflow-y:auto;overflow-x:hidden;padding-bottom:calc(72px + env(safe-area-inset-bottom));-webkit-overflow-scrolling:touch;scrollbar-width:none;overscroll-behavior:none;}
+.screen{flex:1;overflow-y:auto;overflow-x:hidden;padding-bottom:calc(66px + env(safe-area-inset-bottom));-webkit-overflow-scrolling:touch;scrollbar-width:none;overscroll-behavior:none;}
 .screen::-webkit-scrollbar{display:none;}
 /* Nav */
 .bnav{position:fixed;bottom:0;left:0;right:0;width:100%;max-width:430px;margin:0 auto;background:var(--wh);border-top:1px solid var(--bd);display:flex;flex-direction:column;z-index:200;box-shadow:0 -6px 24px var(--sh2);transition:transform .3s ease,opacity .3s ease;}
 body.sheet-open .bnav{transform:translateY(100%);opacity:0;pointer-events:none;}
-.bnav-row{display:flex;width:100%;}
-.bnav-ia{height:env(safe-area-inset-bottom,0px);min-height:0;flex-shrink:0;}
-.ni{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;border:none;background:none;color:var(--mu);padding:10px 0 8px;transition:color .2s;font-family:'Plus Jakarta Sans',sans-serif;}
+.bnav-row{display:flex;width:100%;height:54px;}
+.bnav-ia{height:env(safe-area-inset-bottom,0px);min-height:0;flex-shrink:0;background:var(--wh);}
+.ni{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;border:none;background:none;color:var(--mu);padding:0;transition:color .2s;font-family:'Plus Jakarta Sans',sans-serif;}
 .ni.on{color:var(--ro);}
 .ni-i{font-size:22px;line-height:1;transition:transform .2s;}
 .ni.on .ni-i{transform:scale(1.12);}
