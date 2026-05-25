@@ -76,7 +76,7 @@ function PinScreen({ onUnlock }) {
   const dots = Math.max(6, currentInput.length);
 
   return (
-    <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "0 32px" }}>
+    <div className="pin-wrap">
       <div style={{ fontSize: 52, marginBottom: 14 }}>🔐</div>
       <h1 style={{ fontFamily: "Lora,serif", fontSize: 24, fontWeight: 700, color: "var(--dp)", marginBottom: 6, textAlign: "center" }}>BumilKu</h1>
       <p style={{ fontSize: 14, color: "var(--mu)", marginBottom: 28, textAlign: "center", lineHeight: 1.5 }}>
