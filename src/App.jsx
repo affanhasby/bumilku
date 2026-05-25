@@ -87,12 +87,15 @@ function App() {
     <>
       <div ref={screenRef} className="screen">{renderScreen()}</div>
       <nav className="bnav">
-        {TABS.map(t => (
-          <button key={t.id} className={`ni ${tab === t.id ? "on" : ""}`} onClick={() => { setTab(t.id); scrollToTop(); }}>
-            <span className="ni-i">{t.icon}</span>
-            <span className="ni-l">{t.label}</span>
-          </button>
-        ))}
+        <div className="bnav-row">
+          {TABS.map(t => (
+            <button key={t.id} className={`ni ${tab === t.id ? "on" : ""}`} onClick={() => { setTab(t.id); scrollToTop(); }}>
+              <span className="ni-i">{t.icon}</span>
+              <span className="ni-l">{t.label}</span>
+            </button>
+          ))}
+        </div>
+        <div className="bnav-ia" />
       </nav>
     </>
   );
