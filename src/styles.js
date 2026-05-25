@@ -8,9 +8,9 @@ const CSS = `
   --mu:#A08880;--tx:#3D2B26;--bd:#EEE0D6;--wh:#FFF;
   --sh:rgba(139,74,60,0.10);--sh2:rgba(139,74,60,0.16);
 }
-html,body{height:100%;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;touch-action:manipulation;overscroll-behavior:none;}
-#root{position:fixed;inset:0;display:flex;justify-content:center;}
-.shell{position:relative;width:100%;max-width:430px;height:100%;background:var(--cr);display:flex;flex-direction:column;overflow:hidden;}
+html,body{height:100%;margin:0;padding:0;background:var(--cr);font-family:'Plus Jakarta Sans',sans-serif;touch-action:manipulation;overscroll-behavior:none;}
+#root{height:100%;}
+.shell{position:fixed;top:0;left:0;right:0;bottom:0;width:100%;max-width:430px;margin:0 auto;background:var(--cr);display:flex;flex-direction:column;overflow:hidden;}
 .screen{flex:1;overflow-y:auto;overflow-x:hidden;padding-bottom:calc(54px + env(safe-area-inset-bottom,0px));-webkit-overflow-scrolling:touch;scrollbar-width:none;overscroll-behavior:none;}
 .screen::-webkit-scrollbar{display:none;}
 /* Nav — absolute dalam shell, bukan fixed, agar touch zone & visual selalu sinkron */
