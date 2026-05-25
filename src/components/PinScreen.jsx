@@ -77,7 +77,6 @@ function PinScreen({ onUnlock }) {
 
   return (
     <div className="pin-wrap">
-      <div className="pin-top" />
       <div style={{ fontSize: 52, marginBottom: 14 }}>🔐</div>
       <h1 style={{ fontFamily: "Lora,serif", fontSize: 24, fontWeight: 700, color: "var(--dp)", marginBottom: 6, textAlign: "center" }}>BumilKu</h1>
       <p style={{ fontSize: 14, color: "var(--mu)", marginBottom: 28, textAlign: "center", lineHeight: 1.5 }}>
