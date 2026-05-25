@@ -24,9 +24,10 @@ body.sheet-open .bnav{transform:translateY(100%);opacity:0;pointer-events:none;}
 .ni.on .ni-i{transform:scale(1.12);}
 .ni-l{font-size:10px;font-weight:700;letter-spacing:.02em;}
 /* Header — env() tanpa minimum besar: browser mode padding kecil, standalone otomatis naik */
-.hdr{background:linear-gradient(150deg,var(--ro2) 0%,var(--ro) 45%,var(--pe) 100%);padding:22px 20px 28px;position:relative;overflow:hidden;}
+.hdr{background:linear-gradient(150deg,var(--ro2) 0%,var(--ro) 45%,var(--pe) 100%);padding:calc(env(safe-area-inset-top,0px) + 22px) 20px 28px;position:relative;overflow:hidden;}
 /* PIN page */
-.pin-wrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 32px;position:relative;}
+.pin-wrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:calc(env(safe-area-inset-top,0px) + 16px) 32px calc(env(safe-area-inset-bottom,0px) + 16px);position:relative;}
+.pin-top{position:absolute;top:0;left:0;right:0;height:env(safe-area-inset-top,0px);background:linear-gradient(150deg,var(--ro2),var(--ro));}
 .hdr::before{content:'';position:absolute;top:-50px;right:-50px;width:220px;height:220px;background:rgba(255,255,255,.07);border-radius:50%;}
 .hdr::after{content:'';position:absolute;bottom:-70px;left:-40px;width:180px;height:180px;background:rgba(255,255,255,.05);border-radius:50%;}
 .hdr-in{position:relative;z-index:1;}
