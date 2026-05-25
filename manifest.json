@@ -1,0 +1,25 @@
+{
+  "name": "BumilKu — Buku KIA Digital",
+  "short_name": "BumilKu",
+  "description": "Rekam kunjungan dokter, pantau kehamilan, dan simpan dokumen medis.",
+  "start_url": "/bumilku/",
+  "scope": "/bumilku/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FDF6EE",
+  "theme_color": "#C96150",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
